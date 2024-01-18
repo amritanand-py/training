@@ -14,7 +14,7 @@ namespace uc2_code
             int dayHrs = 8;
             Console.WriteLine("Your daily wage is : " + (Convert.ToInt32(wageRate*dayHrs)));
             Console.ReadLine();
-            Console.ReadLine();
+            
         }
     }
 }
