@@ -10,8 +10,7 @@ namespace snakeLadder
     {
         static void Main(string[] args)
         {
-<<<<<<< Updated upstream
-=======
+
             Console.WriteLine("Welcome to Snake and Ladder");
             Console.Write("Enter Your Name:");
             String name = Console.ReadLine();
@@ -37,7 +36,7 @@ namespace snakeLadder
             }
             
 
->>>>>>> Stashed changes
+
         }
     }
 }
