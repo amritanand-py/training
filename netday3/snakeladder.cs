@@ -19,6 +19,7 @@ namespace snakeLadder
             Console.WriteLine();
             Console.WriteLine("The Player \r\nstarts from 0 rolls the die to get a number between 1 to 6, finds \r\na safe place, ladder or a snake keeps doing till the winning spot \r\n100 is achieved.\r\n");
             int initalPosition = 0;
+            int rolling = letsroll();
             int currentPosition = 0;
             Console.WriteLine($"{name}, Your Current Position is :{currentPosition}");
             Console.WriteLine();
@@ -26,19 +27,20 @@ namespace snakeLadder
             Console.WriteLine("Let's Begin the game : ");
             Console.WriteLine();
             Console.WriteLine("Press 'Enter' to begin the game to Roll die");
+            Random rand = new Random();
 
             //    UC-2
             String input = Console.ReadLine();
             //ROlling Starts here
             if (input == "")
             {
-                Random rand = new Random();
+                
                 int loopcounter = 0;
                 while (currentPosition != 100)
                 {
 
-                    int rolling = rand.Next(1, 6);
-                    Console.WriteLine("Your Rolling outcome is : " + rolling);
+                    letsroll();
+
 
                     // UC-3
 
@@ -85,6 +87,18 @@ namespace snakeLadder
 
                 }
             }
+           
         }
+
+
+        static int letsroll()
+        {
+            Random rand = new Random();
+            int rolling = rand.Next(1, 7);
+            Console.WriteLine("Your Rolling outcome is : " + rolling);
+            return rolling;
+        }
+
+
     }
 }
