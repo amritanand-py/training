@@ -25,16 +25,16 @@ namespace snakeLadder
             Console.WriteLine();
             Console.WriteLine("Let's Begin the game : ");
             Console.WriteLine();
-            Console.WriteLine("Type 'Start' to begin the game to Roll die");
+            Console.WriteLine("Press 'Enter' to begin the game to Roll die");
 
             //    UC-2
             String input = Console.ReadLine();
             //ROlling Starts here
-            if (input == "Start")
+            if (input == "")
             {
                 Random rand = new Random();
                 int loopcounter = 0;
-                while (currentPosition < 101)
+                while (currentPosition != 100)
                 {
 
                     int rolling = rand.Next(1, 6);
@@ -43,7 +43,7 @@ namespace snakeLadder
                     // UC-3
 
 
-                    int decision = rand.Next(1, 3);
+                    int decision = rand.Next(1, 4);
                     switch (decision)
                     {
                         case 1:
@@ -53,13 +53,22 @@ namespace snakeLadder
 
                             break;
                         case 2:
-                            currentPosition += rolling;
+                   
+                           if ((currentPosition+rolling) <= 100)
+                            {
+                                currentPosition += rolling;
+                            }
+                           
                             Console.WriteLine("You just ascend ladder");
                             Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
                             break;
                         case 3:
                             currentPosition -= rolling;
                             Console.WriteLine("Oops snake bite you!");
+                            if (currentPosition < 0)
+                            {
+                                currentPosition = 0;
+                            }
                             Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
                             break;
                     }
@@ -70,6 +79,9 @@ namespace snakeLadder
                     Console.WriteLine($"you rolled die {loopcounter} times");
                     Console.WriteLine();
                     Console.WriteLine();
+
+                    
+
 
                 }
             }
