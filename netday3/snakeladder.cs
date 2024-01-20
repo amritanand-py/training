@@ -33,30 +33,43 @@ namespace snakeLadder
             if (input == "Start")
             {
                 Random rand = new Random();
-                int rolling = rand.Next(1, 6);
-                Console.WriteLine("Your Rolling outcome is : " + rolling);
-
-                // UC-3
-
-
-                int decision = rand.Next(1, 3);
-                switch (decision)
+                int loopcounter = 0;
+                while (currentPosition < 101)
                 {
-                    case 1:
-                        currentPosition += 0;
-                        Console.WriteLine("Ah no you just hit nil");
-                        Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
-                        break;
-                    case 2:
-                        currentPosition += rolling;
-                        Console.WriteLine("You just ascend ladder");
-                        Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
-                        break;
-                    case 3:
-                        currentPosition -= rolling;
-                        Console.WriteLine("Oops snake bite you!");
-                        Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
-                        break;
+
+                    int rolling = rand.Next(1, 6);
+                    Console.WriteLine("Your Rolling outcome is : " + rolling);
+
+                    // UC-3
+
+
+                    int decision = rand.Next(1, 3);
+                    switch (decision)
+                    {
+                        case 1:
+                            currentPosition += 0;
+                            Console.WriteLine("Ah no you just hit nil");
+                            Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
+
+                            break;
+                        case 2:
+                            currentPosition += rolling;
+                            Console.WriteLine("You just ascend ladder");
+                            Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
+                            break;
+                        case 3:
+                            currentPosition -= rolling;
+                            Console.WriteLine("Oops snake bite you!");
+                            Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
+                            break;
+                    }
+
+                    // UC-4
+                    // while loop inserted
+                    loopcounter++;
+                    Console.WriteLine($"you rolled die {loopcounter} times");
+                    Console.WriteLine();
+                    Console.WriteLine();
 
                 }
             }
