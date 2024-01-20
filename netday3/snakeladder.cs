@@ -24,6 +24,16 @@ namespace snakeLadder
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Let's Begin the game : ");
+            Console.WriteLine();
+            Console.WriteLine("Type 'Start' to begin the game to Roll die");
+            String input = Console.ReadLine();
+            //ROlling Starts here
+            if (input == "Start")
+            {
+                Random rand = new Random();
+                int rolling = rand.Next(1, 6);
+                Console.WriteLine("Your Rolling outcome is : " + rolling);
+            }
         }
     }
 }
