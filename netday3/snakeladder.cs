@@ -26,6 +26,8 @@ namespace snakeLadder
             Console.WriteLine("Let's Begin the game : ");
             Console.WriteLine();
             Console.WriteLine("Type 'Start' to begin the game to Roll die");
+
+            //    UC-2
             String input = Console.ReadLine();
             //ROlling Starts here
             if (input == "Start")
@@ -33,6 +35,30 @@ namespace snakeLadder
                 Random rand = new Random();
                 int rolling = rand.Next(1, 6);
                 Console.WriteLine("Your Rolling outcome is : " + rolling);
+
+                // UC-3
+
+
+                int decision = rand.Next(1, 3);
+                switch (decision)
+                {
+                    case 1:
+                        currentPosition += 0;
+                        Console.WriteLine("Ah no you just hit nil");
+                        Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
+                        break;
+                    case 2:
+                        currentPosition += rolling;
+                        Console.WriteLine("You just ascend ladder");
+                        Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
+                        break;
+                    case 3:
+                        currentPosition -= rolling;
+                        Console.WriteLine("Oops snake bite you!");
+                        Console.WriteLine($"{name}, now Current Position is :{currentPosition}");
+                        break;
+
+                }
             }
         }
     }
