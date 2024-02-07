@@ -26,14 +26,50 @@ namespace Array_Methods
                 Console.WriteLine();
                
             }
+            /*
 
-            
-            // Printing length
-            int len = intdata.Length;
+                        // Printing length
+                        int len = intdata.Length;
 
+                        Console.WriteLine("array is  :");
+                        PrintArray(intdata);
+                        Console.WriteLine("and the length is " + len);
+
+            */
+
+            /*
+
+                        // Sorting array
+
+                        Console.WriteLine("array is  :");
+                        PrintArray(unsortedarray);
+                        Array.Sort(unsortedarray);
+                        Console.WriteLine("Sorted array is :");
+                        PrintArray(unsortedarray);
+
+            */
+
+            /*
+
+                        // Seraching index of an element then printig it's index
+
+                        Console.WriteLine("array is  :");
+                        PrintArray(unsortedarray);
+                        Console.WriteLine("Index of 66 in above array is " + Array.IndexOf(unsortedarray, 66));
+
+            */
+
+
+
+            // Reversing an Array
             Console.WriteLine("array is  :");
             PrintArray(intdata);
-            Console.WriteLine("and the length is " + len);
+
+            Array.Reverse(intdata);
+
+            Console.WriteLine("Reversed array is  :");
+            PrintArray(intdata);
+
 
 
 
