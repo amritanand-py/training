@@ -1,0 +1,7 @@
+D:\Github\training\Self Study\7-2-24\Array Methods\Array Methods\bin\Debug\Array Methods.exe.config
+D:\Github\training\Self Study\7-2-24\Array Methods\Array Methods\bin\Debug\Array Methods.exe
+D:\Github\training\Self Study\7-2-24\Array Methods\Array Methods\bin\Debug\Array Methods.pdb
+D:\Github\training\Self Study\7-2-24\Array Methods\Array Methods\obj\Debug\Array Methods.csproj.AssemblyReference.cache
+D:\Github\training\Self Study\7-2-24\Array Methods\Array Methods\obj\Debug\Array Methods.csproj.CoreCompileInputs.cache
+D:\Github\training\Self Study\7-2-24\Array Methods\Array Methods\obj\Debug\Array Methods.exe
+D:\Github\training\Self Study\7-2-24\Array Methods\Array Methods\obj\Debug\Array Methods.pdb
